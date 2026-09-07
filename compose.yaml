@@ -1,0 +1,56 @@
+services:
+  mysql:
+    image: mysql:8.4
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: university_db
+      MYSQL_USER: university
+      MYSQL_PASSWORD: university
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uuniversity", "-puniversity"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  java-backend:
+    build:
+      context: ./java-backend
+    restart: unless-stopped
+    environment:
+      SPRING_PROFILES_ACTIVE: mysql
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/university_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: university
+      SPRING_DATASOURCE_PASSWORD: university
+      UNIVERSITY_SEED_DATA: "true"
+      UNIVERSITY_CORS_ORIGINS: http://localhost:3000,http://127.0.0.1:3000
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+
+  web:
+    build: .
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DATABASE_URL: mysql://university:university@mysql:3306/university_db
+      JWT_SECRET: change-this-development-secret
+      JAVA_BACKEND_URL: http://java-backend:8080
+    depends_on:
+      mysql:
+        condition: service_healthy
+      java-backend:
+        condition: service_started
+    ports:
+      - "3000:3000"
+    entrypoint: ["/bin/sh", "/app/docker/web-entrypoint.sh"]
+
+volumes:
+  mysql_data:

@@ -1,0 +1,9 @@
+node_modules
+dist
+.git
+.gitignore
+*.log
+java-backend/target
+java-backend/data
+client/public/__manus__
+.manus-logs
