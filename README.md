@@ -1,5 +1,5 @@
 <p align="center">
-  <img shared = "banner.png" alt="University Evaluation System" width="100%">
+  <img src="assets/banner.png" alt="University Evaluation System" width="100%">
 </p>
 Full-stack university evaluation platform with a React/TypeScript web interface and a substantial Java/Spring Boot business backend.
 
