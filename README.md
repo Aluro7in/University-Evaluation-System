@@ -1,7 +1,10 @@
-<p align="center">
-  <img src="assets/banner.png" alt="University Evaluation System" width="100%">
-</p>
-Full-stack university evaluation platform with a React/TypeScript web interface and a substantial Java/Spring Boot business backend.
+<div align="center">
+  <h1>🎓 UNIVERSITY EVALUATION SYSTEM</h1>
+  <p><strong>ARCHITECTURAL & DESIGN SPECIFICATION • FULL-STACK PLATFORM</strong></p>
+  <br />
+</div>
+
+## Full-stack university evaluation platform with a React/TypeScript web interface and a substantial Java/Spring Boot business backend.
 
 The original project concept is preserved: students, courses, enrollment, grades, polymorphic GPA calculation, transcripts, role-aware web flows, analytics, and database persistence remain part of the application. The Java backend is added as the business engine rather than replacing the existing TypeScript experience.
 
