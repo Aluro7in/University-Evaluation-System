@@ -4,7 +4,7 @@
   <br />
 </div>
 
-## Full-stack university evaluation platform with a React/TypeScript web interface and
+## Full-stack university evaluation platform
 
 The original project concept is preserved: students, courses, enrollment, grades, polymorphic GPA calculation, transcripts, role-aware web flows, analytics, and database persistence remain part of the application. The Java backend is added as the business engine rather than replacing the existing TypeScript experience.
 
