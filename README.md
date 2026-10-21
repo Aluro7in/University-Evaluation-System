@@ -323,7 +323,6 @@ This gives the two layers a safe coexistence path while allowing the Java busine
 - Restrict Java CORS origins in production.
 - Keep the Java API behind the same authentication boundary or an API gateway for production.
 - Use managed MySQL/TiDB in production.
-- Keep GPA and academic rules on the server side; the browser only renders the result.
 ## License
 
 MIT License.
