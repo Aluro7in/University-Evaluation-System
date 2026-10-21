@@ -314,12 +314,6 @@ java_audit_logs
 java_course_prerequisites
 ```
 
-This gives the two layers a safe coexistence path while allowing the Java business backend to grow without breaking the current frontend.
-
-## Security and deployment
-
-- Do not commit `.env` files or real credentials.
-
 ## License
 
 MIT License.
