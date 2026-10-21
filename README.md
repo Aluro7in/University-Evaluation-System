@@ -321,8 +321,6 @@ This gives the two layers a safe coexistence path while allowing the Java busine
 - Do not commit `.env` files or real credentials.
 - Replace the sample JWT secret before deployment.
 - Restrict Java CORS origins in production.
-- Keep the Java API behind the same authentication boundary or an API gateway for production.
-- Use managed MySQL/TiDB in production.
 ## License
 
 MIT License.
