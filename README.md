@@ -324,10 +324,6 @@ This gives the two layers a safe coexistence path while allowing the Java busine
 - Keep the Java API behind the same authentication boundary or an API gateway for production.
 - Use managed MySQL/TiDB in production.
 - Keep GPA and academic rules on the server side; the browser only renders the result.
-
-## Project principle
-
-TypeScript was not removed. The existing React application, tRPC gateway, database integration, and UI remain in the project. Java is now the larger source-code layer and is used for a real backend domain: persistence, academic rules, REST APIs, analytics, validation, reporting, and tests.
 ## License
 
 MIT License.
