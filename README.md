@@ -328,9 +328,6 @@ This gives the two layers a safe coexistence path while allowing the Java busine
 ## Project principle
 
 TypeScript was not removed. The existing React application, tRPC gateway, database integration, and UI remain in the project. Java is now the larger source-code layer and is used for a real backend domain: persistence, academic rules, REST APIs, analytics, validation, reporting, and tests.
-
-GitHub's language chart is based on recognized source-code volume. The current repository has more Java source by line count than TypeScript source while retaining the original web application.
-
 ## License
 
 MIT License.
