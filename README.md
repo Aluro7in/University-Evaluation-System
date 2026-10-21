@@ -319,8 +319,7 @@ This gives the two layers a safe coexistence path while allowing the Java busine
 ## Security and deployment
 
 - Do not commit `.env` files or real credentials.
-- Replace the sample JWT secret before deployment.
-- Restrict Java CORS origins in production.
+
 ## License
 
 MIT License.
