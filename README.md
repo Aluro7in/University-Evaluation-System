@@ -5,8 +5,6 @@
 </div>
 # College Project
 
-[![Architecture diagram](https://gitdiagram.com/diagram-badge.svg)](https://gitdiagram.com/aluro7in/university-evaluation-system?utm_source=readme&utm_medium=badge)
-
 ## Full-stack university evaluation platform
 
 The original project concept is preserved: students, courses, enrollment, grades, polymorphic GPA calculation, transcripts, role-aware web flows, analytics, and database persistence remain part of the application. The Java backend is added as the business engine rather than replacing the existing TypeScript experience.
