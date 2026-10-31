@@ -44,6 +44,8 @@ The original project concept is preserved: students, courses, enrollment, grades
 
 The Java service uses `java_*` table names, so it can share the same MySQL database without colliding with the existing Drizzle schema.
 
+[![Architecture diagram of aluro7in/university-evaluation-system](https://gitdiagram.com/aluro7in/university-evaluation-system/diagram.png)](https://gitdiagram.com/aluro7in/university-evaluation-system?utm_source=readme&utm_medium=picture)
+
 ## Core academic rules
 
 The original evaluation concept is preserved.
